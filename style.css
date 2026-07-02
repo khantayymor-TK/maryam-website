@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Lock Screen */
+#lockScreen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999; /* Higher than loader */
+}
+
+.loginBox{
+    background:#181818;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    border:2px solid #bb86fc;
+    width:90%;
+    max-width:350px;
+    box-shadow: 0 0 20px rgba(187,134,252,.3);
+}
+
+.loginBox h2 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.loginBox p {
+    color: #d8b4fe;
+    font-size: 14px;
+}
+
+.loginBox input{
+    width:100%;
+    padding:12px;
+    margin:15px 0;
+    border:1px solid #bb86fc;
+    background: #252525;
+    color: #fff;
+    border-radius:8px;
+    font-size:16px;
+    text-align: center;
+    outline: none;
+}
+
+#error{
+    color:#ff4f4f;
+    margin-top:10px;
+    font-size: 14px;
+}
+
+/* Loader */
+.loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:hideLoader 3s forwards;
+}
+
+.loader h1{
+    color:#bb86fc;
+    font-size:35px;
+    text-shadow:0 0 20px #bb86fc;
+}
+
+@keyframes hideLoader{
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+/* Hero */
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#000,#1d002e,#4b0082);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    padding:20px;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #bb86fc;
+    box-shadow:0 0 30px #bb86fc;
+    margin-bottom:20px;
+}
+
+.content h1{
+    font-size:42px;
+    color:#fff;
+}
+
+.content h3{
+    color:#d8b4fe;
+    margin-top:8px;
+}
+
+.content p{
+    margin:20px auto;
+    max-width:500px;
+    line-height:1.8;
+}
+
+button{
+    background:#bb86fc;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:50px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #bb86fc;
+}
+
+/* Letter */
+#letter{
+    padding:80px 25px;
+    text-align:center;
+}
+
+#letter h2{
+    color:#bb86fc;
+    margin-bottom:25px;
+}
+
+#letter p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    font-size:18px;
+}
+
+/* Quotes */
+.quotes{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.quotes h2{
+    margin-bottom:30px;
+    color:#bb86fc;
+}
+
+.box{
+    background:#1c1c1c;
+    border:1px solid #bb86fc;
+    margin:20px auto;
+    padding:20px;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(187,134,252,.4);
+}
+
+/* Surprise */
+.surprise{
+    text-align:center;
+    padding:60px;
+}
+
+/* Popup */
+#popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.card{
+    background:#181818;
+    padding:30px;
+    width:90%;
+    max-width:420px;
+    border-radius:20px;
+    text-align:center;
+    border:2px solid #bb86fc;
+    box-shadow:0 0 30px #bb86fc;
+}
+
+.card h2{
+    color:#bb86fc;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    color:#ff4fa3;
+    font-size:20px;
+    animation:float 8s linear infinite;
+    opacity:.8;
+    z-index: 10;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-120px);
+    }
+}
+
+/* Responsive */
+@media(max-width:600px){
+    .content h1{
+        font-size:32px;
+    }
+    .profile{
+        width:150px;
+        height:150px;
+    }
+    #letter p{
+        font-size:16px;
+    }
+}
