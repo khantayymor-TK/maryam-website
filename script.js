@@ -73,3 +73,10 @@ setInterval(()=>{
         star.remove();
     },7000);
 },700);
+const music = document.getElementById("bgMusic");
+
+document.getElementById("startBtn").addEventListener("click", function () {
+    music.play().catch(function(error) {
+        console.log("Music couldn't start:", error);
+    });
+});
